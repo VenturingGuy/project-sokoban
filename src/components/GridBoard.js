@@ -1,13 +1,13 @@
 import React from 'react'
 import GridSquare from './GridSquare'
+import { useSelector } from 'react-redux'
 
 // Represents a 8 x 9 grid of grid squares
 
 export default function GridBoard(props) {
+    const game = useSelector((state) => state.game)
+    const { grid } = game
 
-  // generates an array of 18 rows, each containing 10 GridSquares.
-
-    const grid = []
     for (let row = 0; row < 18; row ++) {
         grid.push([])
         for (let col = 0; col < 10; col ++) {
