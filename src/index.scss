@@ -1,4 +1,6 @@
-
+* {
+    box-sizing: border-box;
+  }
 :root {
     
     --bg-color: gray;
@@ -59,3 +61,11 @@ body {
     border-bottom-color: var(--border-bottom-color);
     background-color: var(--bg-color);
   }
+
+.grid-board {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), var(--tile-size));
+    grid-gap: 0;
+    align-self: flex-start;
+}
+  
