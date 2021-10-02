@@ -5,6 +5,8 @@ import { createStore } from 'redux';
 import reducers from './reducers'
 import GridSquare from './components/GridSquare';
 
+
+
 const store = createStore(reducers)
 
 function App() {
