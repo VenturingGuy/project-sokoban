@@ -4,6 +4,7 @@ import GridBoard from './components/GridBoard';
 import { createStore } from 'redux';
 import reducers from './reducers'
 import GridSquare from './components/GridSquare';
+import Controls from './components/Controls';
 
 
 
@@ -17,6 +18,7 @@ function App() {
           <h1 className="App-title">Sokoban Redux</h1>
         </header>
         <GridBoard />
+        <Controls />
       </div>
     </Provider>
   );

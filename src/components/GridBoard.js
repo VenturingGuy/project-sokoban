@@ -4,22 +4,24 @@ import { useSelector } from 'react-redux'
 
 // Represents a 8 x 9 grid of grid squares
 
+
+
 export default function GridBoard(props) {
-    const game = useSelector((state) => state.game)
-    const { grid } = game
-
-    for (let row = 0; row < 18; row ++) {
-        grid.push([])
-        for (let col = 0; col < 10; col ++) {
-            grid[row].push(<GridSquare key={`${col}${row}`} color="1" />)
-        }
-    }
-
-  // The components generated in makeGrid are rendered in div.grid-board
-
-    return (
-        <div className='grid-board'>
-            {grid}
-        </div>
-    )
-}
+    
+      const grid = useSelector(state => state.game.grid)
+      const grid_squares = []
+      for (let row = 0; row < 9; row ++) {
+          for (let col = 0; col < 8; col ++) {
+              grid_squares.push(<GridSquare key={`${col}${row}`} color={grid[row][col]} />)
+          }
+      }
+  
+    // The components generated in makeGrid are rendered in div.grid-board
+  
+      return (
+          <div className='grid-board'>
+              {grid_squares}
+          </div>
+      )
+  }
+  
